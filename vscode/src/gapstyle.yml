@@ -2635,3 +2635,53 @@ tokenColors:
     - punctuation.section.embedded.elixir
     settings:
       foreground: *STRING_INTERPOLATION
+
+# =============================================================================
+# Rocq
+# =============================================================================
+  - name: Rocq Type
+    scope:
+    # Inductive, CoInductive, Variant, Record, Structure, and Class names
+    - entity.name.type.rocq
+    settings:
+      foreground: *CLASS
+      fontStyle: ''
+
+  - name: Rocq Assumption
+    scope:
+    # Axiom, Parameter, Variable, Hypothesis, and Context names
+    - entity.name.assumption.rocq
+    settings:
+      foreground: *FUNCTION_PARAM
+      fontStyle: ''
+
+  - name: Rocq Admit
+    scope:
+    # admit and Admitted. The grammar marks these as illegal.
+    - invalid.illegal.admit.rocq
+    settings:
+      foreground: '#FF0000'
+      fontStyle: underline
+
+  - name: Rocq Operator
+    scope:
+    # Beats the general keyword.operator rule, which uses the default text color.
+    # Orange is the Darcula operator color already used for interpolation.
+    - keyword.operator.rocq
+    settings:
+      foreground: *STRING_INTERPOLATION
+      fontStyle: ''
+
+  - name: Rocq Project File
+    scope:
+    - entity.name.file.rocq-project
+    settings:
+      foreground: *STRING
+      fontStyle: ''
+
+  - name: Rocq Project Folder
+    scope:
+    - entity.name.folder.rocq-project
+    settings:
+      foreground: *MEMBER_VAR
+      fontStyle: ''
